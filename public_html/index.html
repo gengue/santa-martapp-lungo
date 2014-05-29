@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Santa Martapp</title>
+        <meta charset="UTF-8">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="stylesheet" href="css/lungo.css">
+        <link rel="stylesheet" href="css/lungo.theme.css">
+        <link rel="stylesheet" href="css/lungo.icon.css">  
+    </head>
+    <body>
+       
+        <section id="sec-prncipal" data-transition="slide">
+            <header data-title="Santa Martapp" >                
+                <menu class="on-right">
+                    <button data-view-section="sec-secundaria" data-icon="arrow-right"></button>
+                </menu>
+            </header>
+            <article id="art-principal" class="active indented" data-transition="cover">
+                <p> Marañas aca</p>
+            </article>
+            <article id="art-secundario" class="indented" data-transition="cover">
+                <p>contenido secundario</p>
+            </article>
+            <footer>
+                <nav class="with-labels">
+                    <a href="#" data-label="Inicio" data-title="Santa Martapp" data-view-article="art-principal" data-icon="home" class="active"></a>
+                    <a href="#" data-label="Seccion 2" data-title="otro articulo" data-view-article="art-secundario" data-icon="download"></a>
+                </nav>
+            </footer>
+        </section>
+        
+        <section id="sec-secundaria" data-transition="slide">
+            <header data-back="arrow-left" data-title="Seccion Secundaria!"></header>
+            <article id="art-sec-principal" class="active">
+                <p>Mas contenido</p>
+            </article>
+        </section>
+
+        <script src="js/lib/quo.js"></script>
+        <script src="js/lib/lungo.js"></script>
+        <script>
+            Lungo.init({
+                "name" : "Santa Martapp",
+                "version" : "0.0.1"
+            });
+        </script>
+    </body>
+</html>
