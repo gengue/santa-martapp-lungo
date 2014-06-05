@@ -1,0 +1,81 @@
+<section id="sec-nuevoPaseo" data-transition="slide">
+            <header data-back="remove" data-title="Nuevo Paseo"></header>
+            <nav data-control="groupbar" class="large">
+                <a href="#" data-title="Seleccionar Lugar" data-view-article="art-principal" data-icon="home" class="active"></a>
+                <a href="#" data-title="Definir paseo" data-view-article="art-misPaseos" data-icon="calendar"></a>
+                <a href="#" data-title="Agrega amigas" data-view-article="art-lugares" data-icon="map-marker"></a>
+                <a href="#" data-title="Mi Cuenta" data-view-article="art-miCuenta" data-icon="user"></a>
+            </nav>
+            <article id="art-nuevoPaseo" class="indented scroll active">
+                <div class="form">                  
+
+                    <fieldset class="radius shadow align-center">
+                        <label>Selecciona Lugar</label>
+                        <a class="button accept" data-view-article="art-lugares-sel" data-label="Seleccionar"></a>
+                    </fieldset>    
+                    <br>
+                    <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="save" data-label="Guardar"></a>                    
+                </div>
+            </article>
+
+            <article id="art-lugares-sel" class="list scroll indented" data-transition="pop">
+
+                <h1>Descubre lugares</h1>
+                <div class="form">
+                    <fieldset data-icon="search" >                        
+                        <input type="search" placeholder="Busqueda..." class="search"/>
+                    </fieldset>
+                </div>
+
+                <ul class="selectable">
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Playas</strong>
+                            <small></small> 
+                        </a>
+
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Rios</strong>
+                            <small></small>
+                        </a>
+
+                    </li>
+                    <li class="selectable"> 
+                        <a href="#">
+                            <strong>Vida Nocturna</strong>
+                            <small></small>
+                        </a>
+
+                    </li>                        
+                    <li class="selectable">                            
+                        <a href="#"> 
+                            <strong>Museos</strong>
+                            <small></small>
+                        </a>
+
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Historico</strong>
+                            <small></small>
+                        </a>
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Ecoturismo</strong>
+                            <small></small>
+                        </a>
+                    </li>                        
+                    <li class="selectable">
+                        <a href="#"> 
+                            <strong>Centros recreacionales</strong>
+                            <small></small>
+                        </a>
+                    </li>                                       
+                </ul>               
+
+            </article>
+
+        </section>
