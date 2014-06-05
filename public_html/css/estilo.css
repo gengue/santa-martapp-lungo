@@ -1,10 +1,15 @@
 .redondo {
-    border: 2px solid grey;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    -webkit-border-radius: 800px;
-    -moz-border-radius: 800px;
-    border-radius: 800px;
-    width: 12%;
+    -webkit-border-radius: 150px; 
+    -moz-border-radius: 150px; 
+    border-radius: 150px;   
+}
+
+contenedor-redondo{ 
+    background-color: #fff; 
+    padding: 5px; 
+    width: 300px; 
+    -webkit-border-radius: 150px; 
+    -moz-border-radius: 150px; 
+    -webkit-box-shadow: 1px 1px 10px #484848; 
+    border-radius: 150px;    
 }
