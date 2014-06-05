@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+            xmlns:gap   = "http://phonegap.com/ns/1.0"
+            id          = "santaMartapp"
+            versionCode = "10" 
+            version     = "1.0.0" >
+
+    
+
+    <name>Santa Martapp</name>
+
+    <description>
+        An example for phonegap build docs. 
+    </description>
+
+    <author href="https://www.facebook.com/the3ballsoft" email="the3ballsoft@gmail.com">
+        Genesis Guerrero Martinez
+    </author>
+    <access origin="*" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.2" />
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="webos" />
+    <gap:platform name="symbian" />
+    <gap:platform name="blackberry" />
+    <gap:platform name="winphone" />
+</widget>
