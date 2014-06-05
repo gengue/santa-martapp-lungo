@@ -22,10 +22,10 @@
     <body>
 
         <section id="sec-login" data-transition="cover">
-            <article id="art-login" class="active idented splash">
+            <article id="art-login" class="active idented scroll splash">
 
                 <div class="form">
-                    <img src="images/Logo1.png" width="380" height="260" alt="Santa Martapp Logo"/>
+                    <img src="images/Logo1.png" width="380" height="200" alt="Santa Martapp Logo"/>
                     <fieldset data-icon="user">
                         <label>Usuario</label>
                         <input type="text" placeholder="Ingrese su correo electronico" />
@@ -40,11 +40,10 @@
                 </div>
             </article>
         </section>
-        <section id="sec-registro" data-transition="slide">
+        <section id="sec-registro" data-transition="slide" class="idented scroll">
             <article id="art-registro" class="splash">                
-                <div class="form">
-                    <img src="images/Logo1.png"  width="280" height="160" alt="Santa Martapp Logo" class="right-sign"/>
-                    <fieldset data-icon="bolt">
+                <div class="form">  
+                    <fieldset data-icon="bolt">                       
                         <label>Nombre</label>
                         <input type="text" placeholder="Ingrese su nombre y apellido" required/>
                     </fieldset>
@@ -77,12 +76,7 @@
                     <button  data-icon="plus" data-view-section="sec-nuevoPaseo"></button>
                 </nav>
             </header>
-            <nav data-control="groupbar" class="large">
-                <a href="#" data-title="Inicio" data-view-article="art-principal" data-icon="home" class="active"></a>
-                <a href="#" data-title="Mis Paseos" data-view-article="art-misPaseos" data-icon="calendar"></a>
-                <a href="#" data-title="Lugares" data-view-article="art-lugares" data-icon="map-marker"></a>
-                <a href="#" data-title="Mi Cuenta" data-view-article="art-miCuenta" data-icon="user"></a>
-            </nav>
+
             <article id="art-principal" class="list scroll" data-transition="slide">
                 <ul>
                     <li data-image="images/lugares/playaGrande_min.jpg" class="selectable arrow" >
@@ -180,11 +174,20 @@
                 <p>Tu cuenta</p>
             </article>
 
+            <footer>
+                <nav>
+                    <a href="#" data-title="Seleccionar Lugar" data-view-article="art-principal" data-icon="home" class="active"></a>
+                    <a href="#" data-title="Definir paseo" data-view-article="art-misPaseos" data-icon="calendar"></a>
+                    <a href="#" data-title="Agrega amigas" data-view-article="art-lugares" data-icon="map-marker"></a>
+                    <a href="#" data-title="Mi Cuenta" data-view-article="art-miCuenta" data-icon="user"></a>
+                </nav>
+            </footer>
+
         </section>
 
         <section id="sec-nuevoPaseo" data-transition="slide">
             <header data-back="remove" data-title="Nuevo Paseo"></header>
-             <nav data-control="groupbar" class="large">
+            <nav data-control="groupbar" class="large">
                 <a href="#" data-title="Seleccionar Lugar" data-view-article="art-principal" data-icon="home" class="active"></a>
                 <a href="#" data-title="Definir paseo" data-view-article="art-misPaseos" data-icon="calendar"></a>
                 <a href="#" data-title="Agrega amigas" data-view-article="art-lugares" data-icon="map-marker"></a>
@@ -201,7 +204,7 @@
                     <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="save" data-label="Guardar"></a>                    
                 </div>
             </article>
-            
+
             <article id="art-lugares-sel" class="list scroll indented" data-transition="pop">
 
                 <h1>Descubre lugares</h1>
@@ -261,7 +264,7 @@
                 </ul>               
 
             </article>
-            
+
         </section>
 
         <section id="sec-amigos" data-transition="slide">
