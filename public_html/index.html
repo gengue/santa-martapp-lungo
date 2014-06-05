@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="css/lungo.theme.css">
         <link rel="stylesheet" href="css/lungo.icon.css">  
         <link rel="stylesheet" href="css/estilo.css">  
-        <script type="text/javascript" charset="utf-8" src="js/lib/cordova.js"></script>
         <script src="js/lib/fastclick.js" ></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWAb6ghIZ4D-qyQQ4Bd0CGCpvJMqTIX6c"></script>
         
@@ -31,14 +30,15 @@
                     </div>
                     <fieldset data-icon="user">
                         <label>Email</label>
-                        <input type="text"  />
+                        <input type="text" name="user" id="user" required />
                     </fieldset>
                     <fieldset data-icon="lock">
                         <label>Contraseña</label>
-                        <input type="password" />
+                        <input type="password" name="pass" id="pass" required/>
                     </fieldset>
+                    <span id="msg"></span>
                     <br>
-                    <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="unlock" data-label="Entrar"></a>
+                    <a href="javascript:login();" class="button large anchor" data-icon="unlock" data-label="Entrar"></a>
                     <a href="#" class="button large anchor" data-view-section="sec-registro" data-icon="signin" data-label="Registrarse"></a>
                 </div>
             </article>

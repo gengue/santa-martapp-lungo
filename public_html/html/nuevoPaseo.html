@@ -1,81 +1,135 @@
 <section id="sec-nuevoPaseo" data-transition="slide">
-            <header data-back="remove" data-title="Nuevo Paseo"></header>
-            <nav data-control="groupbar" class="large">
-                <a href="#" data-title="Seleccionar Lugar" data-view-article="art-principal" data-icon="home" class="active"></a>
-                <a href="#" data-title="Definir paseo" data-view-article="art-misPaseos" data-icon="calendar"></a>
-                <a href="#" data-title="Agrega amigas" data-view-article="art-lugares" data-icon="map-marker"></a>
-                <a href="#" data-title="Mi Cuenta" data-view-article="art-miCuenta" data-icon="user"></a>
-            </nav>
-            <article id="art-nuevoPaseo" class="indented scroll active">
-                <div class="form">                  
+    <header data-back="remove" data-title="Nuevo Paseo"></header>
+    <nav data-control="groupbar" class="with-labels">
+        <a href="#" data-title="Seleccionar Lugar" data-label="Seleccionar Lugar" data-view-article="art-nuevoPaseoInicio" data-icon="map-marker" class="active"></a>
+        <a href="#" data-title="Definir paseo" data-label="Definir paseo" data-view-article="art-definirPaseo" data-icon="calendar"></a>
+        <a href="#" data-title="Agrega amigos" data-label="Agrega amigos" data-view-article="art-agregaAmigos" data-icon="group"></a>                
+    </nav>
+    <article id="art-nuevoPaseoInicio" class="indented scroll active">
+        <div class="form">                  
 
-                    <fieldset class="radius shadow align-center">
-                        <label>Selecciona Lugar</label>
-                        <a class="button accept" data-view-article="art-lugares-sel" data-label="Seleccionar"></a>
-                    </fieldset>    
-                    <br>
-                    <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="save" data-label="Guardar"></a>                    
-                </div>
-            </article>
+            <fieldset class="radius shadow align-center">
+                <label>Selecciona Lugar</label>
+                <a class="button accept anchor" data-view-section="sec-lugares-sel" data-label="Seleccionar"></a>
+            </fieldset>    
+            <br>
+            <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="save" data-label="Guardar"></a>                    
+        </div>
+    </article>  
 
-            <article id="art-lugares-sel" class="list scroll indented" data-transition="pop">
 
-                <h1>Descubre lugares</h1>
-                <div class="form">
-                    <fieldset data-icon="search" >                        
-                        <input type="search" placeholder="Busqueda..." class="search"/>
-                    </fieldset>
-                </div>
+    <article id="art-definirPaseo" class="scroll list idented">
+        <div class="form">                  
 
-                <ul class="selectable">
-                    <li class="selectable">
-                        <a href="#">
-                            <strong>Playas</strong>
-                            <small></small> 
-                        </a>
+            <fieldset class="radius shadow align-center">
+                <label>Titulo del paseo</label>
+                <input type="text" name="tituloPaseo" id="tituloPaseo" required />
 
-                    </li>
-                    <li class="selectable">
-                        <a href="#">
-                            <strong>Rios</strong>
-                            <small></small>
-                        </a>
+                <label>Fecha</label>
+                <input type="date" name="fechaPaseo" id="fechaPaseo" required />
 
-                    </li>
-                    <li class="selectable"> 
-                        <a href="#">
-                            <strong>Vida Nocturna</strong>
-                            <small></small>
-                        </a>
+                <label>Cuota ($)</label>
+                <input type="number" name="cuotaPaseo" id="cuotaPaseo" value="0" required />
 
-                    </li>                        
-                    <li class="selectable">                            
-                        <a href="#"> 
-                            <strong>Museos</strong>
-                            <small></small>
-                        </a>
 
-                    </li>
-                    <li class="selectable">
-                        <a href="#">
-                            <strong>Historico</strong>
-                            <small></small>
-                        </a>
-                    </li>
-                    <li class="selectable">
-                        <a href="#">
-                            <strong>Ecoturismo</strong>
-                            <small></small>
-                        </a>
-                    </li>                        
-                    <li class="selectable">
-                        <a href="#"> 
-                            <strong>Centros recreacionales</strong>
-                            <small></small>
-                        </a>
-                    </li>                                       
-                </ul>               
+            </fieldset>    
+            <br>
+            <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="save" data-label="Guardar"></a>                    
+        </div>        
+    </article>
 
-            </article>
 
-        </section>
+    <article id="art-agregaAmigos" class="scroll list idented">
+        <div class="form">
+            <fieldset data-icon="search" >                        
+                <input type="search" placeholder="Busqueda..." class="search"/>
+            </fieldset>
+        </div>
+        <ul class="selectable">
+            <li class="selectable">
+                <a href="#">
+                    <strong>Ana Cabrera</strong>
+                    <small></small> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <strong>Cristhian Cotes</strong>
+                    <small></small> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <strong>Genesis Guerrero</strong>
+                    <small></small> 
+                </a>
+            </li>
+
+
+        </ul>      
+    </article>
+
+</section>
+
+
+
+<section id="sec-lugares-sel" class="list scroll" data-transition="slide">                    
+    <article id="art-lugares-sel" class="list indented scroll">
+        <div class="form">
+            <fieldset data-icon="search" >                        
+                <input type="search" placeholder="Busqueda..." class="search"/>
+            </fieldset>
+        </div>
+
+        <ul class="selectable">
+            <li class="selectable">
+                <a href="#">
+                    <strong>Playas</strong>
+                    <small></small> 
+                </a>
+
+            </li>
+            <li class="selectable">
+                <a href="#">
+                    <strong>Rios</strong>
+                    <small></small>
+                </a>
+
+            </li>
+            <li class="selectable"> 
+                <a href="#">
+                    <strong>Vida Nocturna</strong>
+                    <small></small>
+                </a>
+
+            </li>                        
+            <li class="selectable">                            
+                <a href="#"> 
+                    <strong>Museos</strong>
+                    <small></small>
+                </a>
+
+            </li>
+            <li class="selectable">
+                <a href="#">
+                    <strong>Historico</strong>
+                    <small></small>
+                </a>
+            </li>
+            <li class="selectable">
+                <a href="#">
+                    <strong>Ecoturismo</strong>
+                    <small></small>
+                </a>
+            </li>                        
+            <li class="selectable">
+                <a href="#"> 
+                    <strong>Centros recreacionales</strong>
+                    <small></small>
+                </a>
+            </li>                                       
+        </ul>             
+    </article>
+
+
+</section>
