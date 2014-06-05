@@ -1,0 +1,10 @@
+.redondo {
+    border: 2px solid grey;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-border-radius: 800px;
+    -moz-border-radius: 800px;
+    border-radius: 800px;
+    width: 12%;
+}

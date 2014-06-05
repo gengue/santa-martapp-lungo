@@ -14,28 +14,58 @@
         <link rel="stylesheet" href="css/lungo.css">
         <link rel="stylesheet" href="css/lungo.theme.css">
         <link rel="stylesheet" href="css/lungo.icon.css">  
+        <link rel="stylesheet" href="css/estilo.css">  
 
         <script src="js/lib/fastclick.js" ></script>
 
     </head>
     <body>
 
-        <section id="login" data-transition="slide">
+        <section id="sec-login" data-transition="cover">
             <article id="art-login" class="active idented splash">
-                
+
                 <div class="form">
-                    <img src="images/Logo1.png" width="45%" height="45%"/>
+                    <img src="images/Logo1.png" width="380" height="260" alt="Santa Martapp Logo"/>
                     <fieldset data-icon="user">
                         <label>Usuario</label>
-                        <input type="text" placeholde="Ingrese su nombre de usuario"/>
+                        <input type="text" placeholder="Ingrese su correo electronico" />
                     </fieldset>
                     <fieldset data-icon="lock">
                         <label>Clave</label>
-                        <input type="password" placeholde="Ingrese su clave"/>
+                        <input type="password" placeholder="Ingrese su clave"/>
                     </fieldset>
                     <br>
                     <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="unlock" data-label="Entrar"></a>
-                    <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="signin" data-label="Registrarse"></a>
+                    <a href="#" class="button large anchor" data-view-section="sec-registro" data-icon="signin" data-label="Registrarse"></a>
+                </div>
+            </article>
+        </section>
+        <section id="sec-registro" data-transition="slide">
+            <article id="art-registro" class="splash">                
+                <div class="form">
+                    <img src="images/Logo1.png"  width="280" height="160" alt="Santa Martapp Logo" class="right-sign"/>
+                    <fieldset data-icon="bolt">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Ingrese su nombre y apellido" required/>
+                    </fieldset>
+                    <fieldset data-icon="bolt">
+                        <label>Apellido</label>
+                        <input type="text" placeholder="Ingrese su apellido" required/>
+                    </fieldset>
+                    <fieldset data-icon="envelope">
+                        <label>Email</label>
+                        <input type="text" placeholder="ejemplo@prueba.com" required/>
+                    </fieldset>
+                    <fieldset data-icon="lock">
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="Ingrese su clave" required/>
+                    </fieldset>
+                    <fieldset data-icon="lock">
+                        <label>Confirma Contraseña</label>
+                        <input type="password" placeholder="reescriba su clave" required/>
+                    </fieldset>
+                    <br>                    
+                    <a href="#" class="button large anchor" data-view-section="sec-login" data-icon="signin" data-label="Registrarse"></a>
                 </div>
             </article>
         </section>
@@ -47,33 +77,193 @@
                     <button  data-icon="plus" data-view-section="sec-nuevoPaseo"></button>
                 </nav>
             </header>
-            <nav data-control="groupbar">
+            <nav data-control="groupbar" class="large">
                 <a href="#" data-title="Inicio" data-view-article="art-principal" data-icon="home" class="active"></a>
                 <a href="#" data-title="Mis Paseos" data-view-article="art-misPaseos" data-icon="calendar"></a>
                 <a href="#" data-title="Lugares" data-view-article="art-lugares" data-icon="map-marker"></a>
                 <a href="#" data-title="Mi Cuenta" data-view-article="art-miCuenta" data-icon="user"></a>
             </nav>
-            <article id="art-principal" class="indented" data-transition="slide">
-                <p> Marañas aca</p>
+            <article id="art-principal" class="list scroll" data-transition="slide">
+                <ul>
+                    <li data-image="images/lugares/playaGrande_min.jpg" class="selectable arrow" >
+                        <a href="#">
+                            <strong>Playa Grande</strong>
+                            <small>Playa Grande es hermosa de aguas transparentes y bellos corales con numerosos kioscos para disfrutar una deliciosa comida de mar y admirar el entorno</small>
+                        </a>
+                    </li>
+                    <li data-image="images/lugares/mundoMarino_min.jpg" class="selectable arrow">
+                        <a href="#">
+                            <strong>Mundo Marino</strong>
+                            <small>El Acuario Mundo Marino en Santa Marta, posee alrededor de 276 especies, las cuales son dificiles de  ver sin sumergirse en el fondo del mar</small>
+                        </a>
+                    </li>
+                    <li data-image="images/lugares/quintaSanPedro_min.jpg" class="selectable arrow" >
+                        <a href="#">
+                            <strong>Quinta San Pedro Alejandrino</strong>
+                            <small>esta institución sin ánimo de lucro se encarga de preservar el legado del Libertador Simón Bolívar </small>
+                        </a>
+                    </li>
+                </ul> 
             </article>
+
             <article id="art-misPaseos" class="indented" data-transition="slide">
-                <p>No tienes paseos activos</p>
+                <div class="empty">
+                    <span class="icon remove"></span>
+                    <strong>No tienes paseos activos</strong>
+                    <small>Puedes crear uno presionando sobre  <span class="icon plus"></span>  en la parte superior derecha</small>
+                </div>                
             </article>
-            <article id="art-lugares" class="indented" data-transition="slide">
-                <p>aca van los lugares</p>
+
+            <article id="art-lugares" class="list scroll indented" data-transition="slide">
+
+                <h1>Descubre lugares</h1>
+                <div class="form">
+                    <fieldset data-icon="search" >                        
+                        <input type="search" placeholder="Busqueda..." class="search"/>
+                    </fieldset>
+                </div>
+
+                <ul class="selectable">
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Playas</strong>
+                            <small></small> 
+                        </a>
+
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Rios</strong>
+                            <small></small>
+                        </a>
+
+                    </li>
+                    <li class="selectable"> 
+                        <a href="#">
+                            <strong>Vida Nocturna</strong>
+                            <small></small>
+                        </a>
+
+                    </li>                        
+                    <li class="selectable">                            
+                        <a href="#"> 
+                            <strong>Museos</strong>
+                            <small></small>
+                        </a>
+
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Historico</strong>
+                            <small></small>
+                        </a>
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Ecoturismo</strong>
+                            <small></small>
+                        </a>
+                    </li>                        
+                    <li class="selectable">
+                        <a href="#"> 
+                            <strong>Centros recreacionales</strong>
+                            <small></small>
+                        </a>
+                    </li>                                       
+                </ul>
+
+                <a href="#" class="button large anchor" data-label="Ver Todos"></a>
+
             </article>
+
             <article id="art-miCuenta" class="indented" data-transition="slide">
                 <p>Tu cuenta</p>
+            </article>
+
+        </section>
+
+        <section id="sec-nuevoPaseo" data-transition="slide">
+            <header data-back="remove" data-title="Nuevo Paseo"></header>
+             <nav data-control="groupbar" class="large">
+                <a href="#" data-title="Seleccionar Lugar" data-view-article="art-principal" data-icon="home" class="active"></a>
+                <a href="#" data-title="Definir paseo" data-view-article="art-misPaseos" data-icon="calendar"></a>
+                <a href="#" data-title="Agrega amigas" data-view-article="art-lugares" data-icon="map-marker"></a>
+                <a href="#" data-title="Mi Cuenta" data-view-article="art-miCuenta" data-icon="user"></a>
+            </nav>
+            <article id="art-nuevoPaseo" class="indented scroll active">
+                <div class="form">                  
+
+                    <fieldset class="radius shadow align-center">
+                        <label>Selecciona Lugar</label>
+                        <a class="button accept" data-view-article="art-lugares-sel" data-label="Seleccionar"></a>
+                    </fieldset>    
+                    <br>
+                    <a href="#" class="button large anchor" data-view-section="sec-principal" data-icon="save" data-label="Guardar"></a>                    
+                </div>
+            </article>
+            
+            <article id="art-lugares-sel" class="list scroll indented" data-transition="pop">
+
+                <h1>Descubre lugares</h1>
+                <div class="form">
+                    <fieldset data-icon="search" >                        
+                        <input type="search" placeholder="Busqueda..." class="search"/>
+                    </fieldset>
+                </div>
+
+                <ul class="selectable">
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Playas</strong>
+                            <small></small> 
+                        </a>
+
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Rios</strong>
+                            <small></small>
+                        </a>
+
+                    </li>
+                    <li class="selectable"> 
+                        <a href="#">
+                            <strong>Vida Nocturna</strong>
+                            <small></small>
+                        </a>
+
+                    </li>                        
+                    <li class="selectable">                            
+                        <a href="#"> 
+                            <strong>Museos</strong>
+                            <small></small>
+                        </a>
+
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Historico</strong>
+                            <small></small>
+                        </a>
+                    </li>
+                    <li class="selectable">
+                        <a href="#">
+                            <strong>Ecoturismo</strong>
+                            <small></small>
+                        </a>
+                    </li>                        
+                    <li class="selectable">
+                        <a href="#"> 
+                            <strong>Centros recreacionales</strong>
+                            <small></small>
+                        </a>
+                    </li>                                       
+                </ul>               
+
             </article>
             
         </section>
 
-        <section id="sec-nuevoPaseo" data-transition="slide">
-            <header data-back="arrow-left" data-title="Nuevo Paseo"></header>
-            <article id="art-nuevoPaseo" class="active">
-                <p>Mas contenido</p>
-            </article>
-        </section>
         <section id="sec-amigos" data-transition="slide">
             <header data-back="arrow-left" data-title="Mis Amigos"></header>
             <article id="art-amigos" class="active">
